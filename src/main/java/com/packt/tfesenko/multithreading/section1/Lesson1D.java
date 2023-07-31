@@ -21,6 +21,10 @@ public class Lesson1D {
         System.out.println("Total apples picked: " + result);
     }
 
+    public static class SomethingWentWrong extends Exception {
+
+    }
+
     public static class PickFruitTask extends RecursiveTask<Integer> {
 
         private final AppleTree[] appleTrees;
@@ -39,7 +43,7 @@ public class Lesson1D {
         protected Integer compute() {
             //  Throw an exception for any task from the right side of the array.
             if (startInclusive >= treeNumber/2) {
-                int throwException = 10/0;
+                completeExceptionally(new SomethingWentWrong());
             }
 
             if (endInclusive - startInclusive < taskThreshold) {
