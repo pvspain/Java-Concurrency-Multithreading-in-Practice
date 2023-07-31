@@ -2,7 +2,6 @@ package com.packt.tfesenko.multithreading.section1;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 public class Lesson4 {
